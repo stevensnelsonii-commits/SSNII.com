@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S. Nelson — Art Director &amp; Illustrator</title>
+<meta name="description" content="S. Nelson — Art Director and illustrator. 15 years building AAA game worlds. Now all in on 2D.">
+<style>
+  :root{
+    --bg:#14100c; --bg2:#1d1712; --cream:#f2e8d5; --muted:#b9a98e;
+    --accent:#d0782f; --line:#3a2f24;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--cream);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased}
+  nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;gap:2rem;
+    padding:1.1rem 2rem;background:rgba(20,16,12,.82);backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line)}
+  nav a{color:var(--muted);text-decoration:none;font-weight:700;font-size:.85rem;
+    letter-spacing:.14em;text-transform:uppercase}
+  nav a:hover{color:var(--cream)}
+  nav .brand{color:var(--cream);margin-right:auto}
+  .hero{min-height:100vh;display:flex;align-items:flex-end;position:relative;overflow:hidden}
+  .hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+  .hero .shade{position:absolute;inset:0;
+    background:linear-gradient(to top,rgba(20,16,12,.96) 8%,rgba(20,16,12,.25) 55%,rgba(20,16,12,.45) 100%)}
+  .hero .inner{position:relative;padding:0 2rem 5rem;max-width:1200px}
+  .hero h1{font-size:clamp(3.2rem,10vw,7.5rem);font-weight:800;letter-spacing:-.02em;line-height:1}
+  .hero h1 span{color:var(--accent)}
+  .hero p.sub{font-size:clamp(1.05rem,2.4vw,1.5rem);font-weight:600;color:var(--cream);margin-top:.6rem}
+  .hero p.tag{color:var(--muted);margin-top:.4rem;max-width:34rem}
+  section{padding:5rem 2rem;max-width:1200px;margin:0 auto}
+  section.narrow{max-width:760px}
+  h2.sec{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;letter-spacing:-.01em;margin-bottom:.4rem}
+  p.lede{color:var(--muted);margin-bottom:3rem;max-width:40rem}
+  .piece{margin-bottom:4.5rem}
+  .piece img{width:100%;height:auto;display:block;border:1px solid var(--line);background:var(--bg2)}
+  .piece .cap{display:flex;baseline:alphabetic;justify-content:space-between;align-items:baseline;
+    padding-top:.7rem;border-top:2px solid var(--accent);margin-top:0}
+  .piece .cap h3{font-size:1.25rem;font-weight:800;letter-spacing:.01em}
+  .piece .cap span{color:var(--muted);font-size:.95rem}
+  .piece p.note{color:var(--muted);font-size:.95rem;margin-top:.25rem}
+  .games{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .games .inner{max-width:760px;margin:0 auto;padding:5rem 2rem}
+  .games p{font-size:1.15rem;margin-bottom:1.2rem}
+  .games p strong{color:var(--cream)}
+  .games .credits{margin-top:2rem;color:var(--muted);font-size:1rem}
+  .games .credits li{list-style:none;padding:.35rem 0;border-top:1px solid var(--line)}
+  .about-grid{display:grid;grid-template-columns:1fr;gap:2rem}
+  footer{border-top:1px solid var(--line);padding:4rem 2rem 5rem;text-align:center}
+  footer h2{font-size:2rem;font-weight:800;margin-bottom:.5rem}
+  footer p{color:var(--muted);max-width:34rem;margin:0 auto 1.5rem}
+  footer .links{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap}
+  footer .links a{color:var(--cream);font-weight:700;text-decoration:none;
+    border:1px solid var(--line);padding:.7rem 1.4rem;border-radius:999px}
+  footer .links a:hover{border-color:var(--accent);color:var(--accent)}
+  @media(min-width:800px){ .piece.wide img{max-height:82vh;object-fit:contain;margin:0 auto} }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="brand" href="#top">S. Nelson</a>
+  <a href="#work">Work</a>
+  <a href="#games">Games</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<header class="hero" id="top">
+  <img class="bg" src="img/ephrum.jpg" alt="EPHRUM">
+  <div class="shade"></div>
+  <div class="inner">
+    <h1>S. NELSON<span>.</span></h1>
+    <p class="sub">Art Director &amp; Illustrator</p>
+    <p class="tag">Fifteen years building AAA game worlds from the ground up. Now all in on 2D.</p>
+  </div>
+</header>
+
+<section id="work">
+  <h2 class="sec">Selected Work</h2>
+  <p class="lede">Ink, watercolor, and everything in between — the range, up front.</p>
+
+  <div class="piece wide">
+    <img src="img/ephrum.jpg" alt="EPHRUM">
+    <div class="cap"><h3>EPHRUM</h3><span>2026</span></div>
+    <p class="note">F-R0M. Ink and watercolor.</p>
+  </div>
+
+  <div class="piece">
+    <img src="img/decay.jpg" alt="Decay">
+    <div class="cap"><h3>Decay</h3><span>2024</span></div>
+    <p class="note">Fine-line ink study.</p>
+  </div>
+
+  <div class="piece">
+    <img src="img/helmet-bird.jpg" alt="Helmet Bird">
+    <div class="cap"><h3>Helmet Bird</h3><span>2025</span></div>
+    <p class="note">Ink. The one that started it all.</p>
+  </div>
+
+  <div class="piece">
+    <img src="img/the-witch.jpg" alt="The Witch">
+    <div class="cap"><h3>The Witch</h3><span>2026</span></div>
+    <p class="note">Ink.</p>
+  </div>
+
+  <div class="piece">
+    <img src="img/the-face.jpg" alt="The Face">
+    <div class="cap"><h3>The Face</h3><span>2026</span></div>
+    <p class="note">Ink.</p>
+  </div>
+
+  <div class="piece">
+    <img src="img/segmented-crawler.jpg" alt="Segmented Crawler">
+    <div class="cap"><h3>Segmented Crawler</h3><span></span></div>
+    <p class="note">Creature ink.</p>
+  </div>
+
+  <div class="piece">
+    <img src="img/tentacle-battle.jpg" alt="Tentacle Battle">
+    <div class="cap"><h3>Tentacle Battle</h3><span>2023</span></div>
+    <p class="note">Ink.</p>
+  </div>
+
+  <div class="piece">
+    <img src="img/the-angler.jpg" alt="The Angler">
+    <div class="cap"><h3>The Angler</h3><span></span></div>
+    <p class="note">Ink.</p>
+  </div>
+
+  <div class="piece">
+    <img src="img/moonshine.jpg" alt="Moonshine">
+    <div class="cap"><h3>Moonshine</h3><span>2025</span></div>
+  </div>
+
+  <div class="piece">
+    <img src="img/gaze.jpg" alt="Gaze">
+    <div class="cap"><h3>Gaze</h3><span></span></div>
+  </div>
+</section>
+
+<div class="games" id="games">
+  <div class="inner">
+    <h2 class="sec">The Games</h2>
+    <p>I spent <strong>15 years</strong> building AAA game worlds from the ground level — projects worth <strong>hundreds of millions of dollars</strong>.</p>
+    <p>On <strong>Elder Scrolls Online</strong> I built the cities of the Morrowind chapter, the Imperial City, and the PvP war zones. Before that, city architecture on <strong>Warhammer Online</strong>. I finished as an <strong>Art Director at Microsoft</strong>.</p>
+    <p>Now I'm all in on 2D — art direction and illustration.</p>
+    <ul class="credits">
+      <li><strong>Microsoft</strong> — Art Director</li>
+      <li><strong>ZeniMax Online Studios</strong> — 15 years, Environment Artist to Art Director</li>
+      <li><strong>BioWare Mythic</strong> — Warhammer Online: Age of Reckoning</li>
+    </ul>
+  </div>
+</div>
+
+<section class="narrow" id="about">
+  <h2 class="sec">Get to know me</h2>
+  <p class="lede">The short version.</p>
+  <div class="about-grid">
+    <p>I'm Steve Nelson — S. Nelson on the work. Twenty-five years making art, fifteen of them inside AAA game studios, the last stretch as an art director. My specialty was always materials and texture: the way a surface tells you its history.</p>
+    <p>These days I run Swamp Shell Industries, my one-man studio, and I draw the things that live in my head — creatures, characters, and dark little worlds — in ink and watercolor. I'm also a musician, which is starting to bleed into the visuals.</p>
+    <p>If you're here because someone sent you: yes, I take on art direction and illustration work. The contact's below.</p>
+  </div>
+</section>
+
+<footer id="contact">
+  <h2>Swamp Shell Industries</h2>
+  <p>My studio. Art direction, illustration, and creative production — one pair of hands, no handoffs.</p>
+  <div class="links">
+    <a href="https://www.instagram.com/swampshell_industries" target="_blank" rel="noopener">Instagram</a>
+    <a href="mailto:steve@swampshellindustriesllc.com">Email</a>
+  </div>
+</footer>
+
+</body>
+</html>
