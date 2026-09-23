@@ -1,0 +1,162 @@
+/* ============================================================
+   SWAMP SHELL INDUSTRIES — shared site style
+   One stylesheet for the whole portfolio: index, resume,
+   /aethon, /private/blackbird. Change it here, it changes
+   everywhere. Brand tokens live in :root — tweak those first.
+   ============================================================ */
+
+/* ---------- 1. Brand tokens ---------- */
+:root{
+  --bg:     #14100c;  /* swamp black-brown */
+  --bg2:    #1d1712;  /* raised surface */
+  --cream:  #f2e8d5;  /* primary text */
+  --muted:  #b9a98e;  /* secondary text */
+  --accent: #d0782f;  /* burnt amber */
+  --line:   #3a2f24;  /* hairlines / borders */
+  --danger: #e0685f;  /* form errors */
+}
+
+/* ---------- 2. Reset & base ---------- */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--cream);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%}
+
+/* ---------- 3. Nav ---------- */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  display:flex;gap:2rem;align-items:center;
+  padding:1.1rem 2rem;
+  background:rgba(20,16,12,.82);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+nav a{
+  color:var(--muted);text-decoration:none;font-weight:700;font-size:.85rem;
+  letter-spacing:.14em;text-transform:uppercase;
+}
+nav a:hover{color:var(--cream)}
+nav a.active{color:var(--accent)}
+nav .brand{display:flex;align-items:center;color:var(--cream);margin-right:auto}
+nav .brand img{height:1.5em;width:auto;margin-right:.55em}
+
+/* ---------- 4. Hero (index / aethon) ---------- */
+.hero{
+  min-height:100vh;display:flex;align-items:flex-end;
+  position:relative;overflow:hidden;
+}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.hero .shade{position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(20,16,12,.96) 8%,rgba(20,16,12,.25) 55%,rgba(20,16,12,.45) 100%)}
+.hero .inner{position:relative;padding:0 2rem 5rem;max-width:1200px}
+.hero h1{
+  font-size:clamp(3.2rem,10vw,7.5rem);font-weight:800;letter-spacing:-.02em;line-height:1;
+  display:flex;align-items:center;gap:.3em;
+}
+.hero h1 img.mark{height:.85em;width:auto}
+.hero h1 span{color:var(--accent)}
+.hero p.sub{font-size:clamp(1.05rem,2.4vw,1.5rem);font-weight:600;color:var(--cream);margin-top:.6rem}
+.hero p.tag{color:var(--muted);margin-top:.4rem;max-width:34rem}
+
+/* ---------- 5. Sections & headings ---------- */
+section{padding:5rem 2rem;max-width:1200px;margin:0 auto}
+section.narrow{max-width:760px}
+h2.sec{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;letter-spacing:-.01em;margin-bottom:.4rem}
+p.lede{color:var(--muted);margin-bottom:3rem;max-width:40rem}
+
+/* ---------- 6. Gallery pieces + shared caption block ---------- */
+.piece{margin-bottom:4.5rem}
+.piece img{width:100%;height:auto;display:block;border:1px solid var(--line);background:var(--bg2)}
+.cap{display:flex;justify-content:space-between;align-items:baseline;
+  padding-top:.7rem;border-top:2px solid var(--accent)}
+.cap h3{font-size:1.25rem;font-weight:800;letter-spacing:.01em}
+.cap span{color:var(--muted);font-size:.95rem}
+p.note{color:var(--muted);font-size:.95rem;margin-top:.25rem}
+p.note a{color:var(--cream)}
+@media(min-width:800px){.piece.wide img{max-height:82vh;object-fit:contain;margin:0 auto}}
+
+/* ---------- 7. Games band ---------- */
+.games{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.games .inner{max-width:760px;margin:0 auto;padding:5rem 2rem}
+.games p{font-size:1.15rem;margin-bottom:1.2rem}
+.games p strong{color:var(--cream)}
+.games .credits{margin-top:2rem;color:var(--muted);font-size:1rem}
+.games .credits li{list-style:none;padding:.35rem 0;border-top:1px solid var(--line)}
+.games .shots{display:grid;grid-template-columns:1fr;gap:2rem;margin:2.5rem 0}
+.games .shots figure img{width:100%;height:auto;display:block;border:1px solid var(--line)}
+.games .shots figcaption{color:var(--muted);font-size:.9rem;margin-top:.5rem}
+.games .reel{margin:0 0 2.5rem}
+.games .reel video{width:100%;height:auto;display:block;border:1px solid var(--line);background:#000}
+.games .reel figcaption{color:var(--muted);font-size:.9rem;margin-top:.5rem}
+@media(min-width:800px){.games .shots{grid-template-columns:1fr 1fr}}
+.about-grid{display:grid;grid-template-columns:1fr;gap:2rem}
+
+/* ---------- 8. Resume page (scoped under main.resume) ---------- */
+main.resume{max-width:820px;margin:0 auto;padding:7.5rem 2rem 4rem;line-height:1.65}
+.r-head h1{font-size:clamp(2.4rem,6vw,3.6rem);font-weight:800;letter-spacing:-.02em;line-height:1}
+.r-head p.role{font-size:1.25rem;font-weight:700;color:var(--cream);margin-top:.4rem}
+.r-head p.contact{color:var(--muted);margin-top:.6rem;font-size:.95rem}
+.r-head p.contact a{color:var(--cream);text-decoration:none;border-bottom:1px solid var(--line)}
+.r-head p.contact a:hover{color:var(--accent);border-color:var(--accent)}
+.r-summary{margin:2.5rem 0 0;padding:1.5rem;border-left:3px solid var(--accent);
+  background:var(--bg2);font-size:1.08rem}
+.r-summary strong{color:var(--cream)}
+main.resume h2.sec{
+  font-size:1.15rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent);margin:3.2rem 0 1.2rem;padding-bottom:.5rem;
+  border-bottom:1px solid var(--line);
+}
+.job{margin-bottom:2rem}
+.job .co{font-weight:800;font-size:1.15rem}
+.job .co span{color:var(--muted);font-weight:400;font-size:.95rem}
+.job .title{font-weight:700;color:var(--cream);margin:.15rem 0 .6rem}
+.job ul{margin-left:1.2rem;color:var(--muted)}
+.job ul li{margin-bottom:.4rem}
+.job ul li::marker{color:var(--accent)}
+.tags{color:var(--muted);line-height:2}
+.tags strong{color:var(--cream)}
+
+/* ---------- 9. Private Blackbird page ---------- */
+.wrap{max-width:900px;margin:0 auto;padding:4rem 1.5rem;min-height:100vh}
+.wrap h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;letter-spacing:-.01em;margin-bottom:.4rem}
+.wrap h1 span{color:var(--accent)}
+.notice{border:1px solid var(--line);background:var(--bg2);padding:1rem 1.25rem;
+  font-size:.9rem;color:var(--muted);margin-bottom:2.5rem}
+.notice strong{color:var(--cream)}
+#gate{max-width:380px;margin:6rem auto;text-align:center}
+#gate h1{font-size:1.6rem;margin-bottom:1rem}
+#gate input{width:100%;padding:.8rem 1rem;font-size:1.05rem;background:var(--bg2);
+  border:1px solid var(--line);color:var(--cream);border-radius:6px;margin-bottom:.8rem}
+#gate button{width:100%;padding:.8rem;font-size:1rem;font-weight:700;cursor:pointer;
+  background:var(--accent);color:#14100c;border:0;border-radius:6px}
+#gate .err{color:var(--danger);margin-top:.8rem;font-size:.9rem;min-height:1.4em}
+#content{display:none}
+.clip{margin-bottom:3.5rem}
+.clip video{width:100%;height:auto;display:block;border:1px solid var(--line);background:#000}
+.clip .cap h3{font-size:1.15rem}
+.clip .cap span{font-size:.9rem}
+.clip p.note{font-size:.92rem;margin-top:.3rem}
+
+/* ---------- 10. Footers ---------- */
+/* .site — big contact footer (index, aethon) */
+footer.site{border-top:1px solid var(--line);padding:4rem 2rem 5rem;text-align:center}
+footer.site h2{font-size:2rem;font-weight:800;margin-bottom:.5rem}
+footer.site p{color:var(--muted);max-width:34rem;margin:0 auto 1.5rem}
+footer.site .links{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap}
+footer.site .links a{color:var(--cream);font-weight:700;text-decoration:none;
+  border:1px solid var(--line);padding:.7rem 1.4rem;border-radius:999px}
+footer.site .links a:hover{border-color:var(--accent);color:var(--accent)}
+/* .mini — small sign-off footer (resume, blackbird) */
+footer.mini{border-top:1px solid var(--line);padding:3rem 2rem 4rem;text-align:center}
+footer.mini p{color:var(--muted);font-size:.9rem}
+footer.mini a{color:var(--cream);text-decoration:none;font-weight:700}
+footer.mini a:hover{color:var(--accent)}
+
+/* ---------- 11. Aethon private banner ---------- */
+.for-nic{background:var(--accent);color:#14100c;font-weight:700}
+.for-nic .inner{max-width:1200px;margin:0 auto;padding:.7rem 2rem}
