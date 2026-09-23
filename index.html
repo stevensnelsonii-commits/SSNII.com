@@ -48,6 +48,10 @@
   .games p strong{color:var(--cream)}
   .games .credits{margin-top:2rem;color:var(--muted);font-size:1rem}
   .games .credits li{list-style:none;padding:.35rem 0;border-top:1px solid var(--line)}
+  .games .shots{display:grid;grid-template-columns:1fr;gap:2rem;margin:2.5rem 0}
+  .games .shots figure img{width:100%;height:auto;display:block;border:1px solid var(--line)}
+  .games .shots figcaption{color:var(--muted);font-size:.9rem;margin-top:.5rem}
+  @media(min-width:800px){.games .shots{grid-template-columns:1fr 1fr}}
   .about-grid{display:grid;grid-template-columns:1fr;gap:2rem}
   footer{border-top:1px solid var(--line);padding:4rem 2rem 5rem;text-align:center}
   footer h2{font-size:2rem;font-weight:800;margin-bottom:.5rem}
@@ -162,6 +166,16 @@
     <p>I spent <strong>15 years</strong> building AAA game worlds from the ground level — projects worth <strong>hundreds of millions of dollars</strong>.</p>
     <p>On <strong>Elder Scrolls Online</strong> I built the cities of the Morrowind chapter, the Imperial City, and the PvP war zones. Before that, city architecture on <strong>Warhammer Online</strong>. I finished as an <strong>Art Director at Microsoft</strong>.</p>
     <p>Now I'm all in on 2D — art direction and illustration.</p>
+    <div class="shots">
+      <figure>
+        <img src="img/eso-vivec.jpg" alt="Vivec City, Elder Scrolls Online">
+        <figcaption>Vivec City, ESO: Morrowind — I built Vivec's Palace and the main town.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/eso-seyda-neen.jpg" alt="Seyda Neen lighthouse, Elder Scrolls Online">
+        <figcaption>Seyda Neen, ESO: Morrowind — the lighthouse and the starting arrival area.</figcaption>
+      </figure>
+    </div>
     <ul class="credits">
       <li><strong>Microsoft</strong> — Art Director</li>
       <li><strong>ZeniMax Online Studios</strong> — 15 years, Environment Artist to Art Director</li>
